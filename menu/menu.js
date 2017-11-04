@@ -1,23 +1,21 @@
-app.controller('PedidosController', function($resource, $timeout, Promos) {
+app.controller('MenuCtrl', function($resource, $timeout, $scope, Promos) {
     'use strict';
 
-    var self = this;
-
-    self.promos = [];
+    $scope.promos = [];
 
     function errorHandler(error) {
         console.log(error.data);
     }
 
-    this.actualizarLista = function() {
+    $scope.actualizarLista = function() {
         Promos.query()
             .then(function(data) {
                 console.log(data);
-                self.promos = data;
+                $scope.promos = data;
             })
             .catch(errorHandler);
     };
 
-    this.actualizarLista();
+    $scope.actualizarLista();
 
 });

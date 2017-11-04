@@ -8,7 +8,7 @@ app.config(function($stateProvider) {
 
     $stateProvider.state('menu', {
         templateUrl: 'menu/menu.html',
-        controller: 'PedidosController'
+        controller: 'MenuCtrl'
     });
 
 });

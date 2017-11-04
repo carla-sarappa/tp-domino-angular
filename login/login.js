@@ -1,4 +1,4 @@
-app.controller('LoginCtrl', function($resource, $timeout) {
+app.controller('LoginCtrl', function($resource, $timeout, $scope) {
 
 
 });
